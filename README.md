@@ -29,7 +29,7 @@ A simple Task Manager built with plain HTML, CSS and JavaScript, hosted on GitHu
 
 ## REST API used
 
-Base URL: `https://PROJECT_ID.supabase.co/rest/v1`
+Base URL: `https://ewnxyeiwxvhhgmkcwfyy.supabase.co/`
 
 | Method | Endpoint | Used for |
 | --- | --- | --- |

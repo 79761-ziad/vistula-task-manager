@@ -1,1 +1,0 @@
-# vistula-task-manager

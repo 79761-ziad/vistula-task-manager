@@ -51,4 +51,4 @@ Only the public publishable key is stored in this repository. This is a demo dat
 ## Team collaboration (Pull Requests)
 
 - PR I received (merged into this repo): _add link here_
-- PR I created in my partner's repo: _add link here_
+- PR I created in my partner's repo: https://github.com/79726-rida/vistula-task-manager/pull/1

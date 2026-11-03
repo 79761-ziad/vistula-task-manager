@@ -1,0 +1,68 @@
+ 
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+
+.page-header h1 { margin: 0 0 4px; }
+.meta { margin: 0 0 8px; color: var(--muted); }
+a { color: lightgreen; }
+
+.card, .task-item {
+  background: tomato;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+form { margin-top: 20px; display: grid; gap: 6px; }
+form.editing { border-color: lightblue; }
+label { font-weight: 600; font-size: 0.9rem; }
+
+input, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font: inherit;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.form-actions { display: flex; gap: 8px; margin-top: 8px; }
+
+button {
+  font: inherit;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid lightgreen;
+  background: lightgreen;
+  color: #fff;
+  cursor: pointer;
+}
+button.secondary, .edit-task, .toggle-task { background: #fff; color: lightgreen; }
+.delete-task { background: #fff; color: red; border-color: red; }
+button:disabled { opacity: 0.6; cursor: wait; }
+
+#status-message { min-height: 1.5em; margin: 12px 0; }
+#status-message.error { color: red; font-weight: 600; }
+#status-message.success { color: green; }
+
+#task-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+
+.task-item { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.task-body { flex: 1 1 260px; min-width: 0; }
+.task-title { margin: 0; font-size: 1.05rem; overflow-wrap: anywhere; }
+.task-description { margin: 4px 0; color: white; overflow-wrap: anywhere; }
+.task-status { font-size: 0.85rem; font-weight: 600; }
+.task-item.completed .task-title { text-decoration: line-through; color: var(--muted); }
+.task-item.completed .task-status { color: green; }
+.task-actions { display: flex; gap: 6px; align-items: flex-start; flex-wrap: wrap; }
+#contribution-link{
+  color: red;
+}

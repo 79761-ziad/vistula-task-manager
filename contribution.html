@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Contribution</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    color: #1a1a1a;
+  }
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  #contributor-student-id {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  a {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+  <h1>Team Contribution</h1>
+
+  <button id="load-contributor">Show Contributor</button>
+  <p id="contributor-student-id"></p>
+
+  <a href="index.html">&larr; Back to Task Manager</a>
+
+  <script>
+    document.getElementById('load-contributor').addEventListener('click', async () => {
+      const statusEl = document.getElementById('contributor-student-id');
+      try {
+        const response = await fetch('contribution.json');
+        const data = await response.json();
+        statusEl.textContent = `Contributor Student ID: ${data.contributorStudentId}`;
+      } catch (error) {
+        statusEl.textContent = 'Error loading contributor information.';
+      }
+    });
+  </script>
+</body>
+</html>
